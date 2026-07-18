@@ -1,6 +1,7 @@
+import { Link } from 'react-router-dom';
 import './TablaVideojuegos.css';
 
-function TablaVideojuegos({ videojuegos }) {
+function TablaVideojuegos({ videojuegos, onEliminar }) {
   return (
     <div className="tabla-container">
       <table className="tabla-videojuegos">
@@ -13,6 +14,7 @@ function TablaVideojuegos({ videojuegos }) {
             <th>Precio</th>
             <th>Disponible</th>
             <th>Progreso de Descarga</th>
+            <th>Acciones</th>
           </tr>
         </thead>
         <tbody>
@@ -31,6 +33,21 @@ function TablaVideojuegos({ videojuegos }) {
                 <span className="progreso-texto">
                   {Math.round(juego.progreso * 100)}%
                 </span>
+              </td>
+              <td data-label="Acciones" className="celda-acciones">
+                <Link
+                  to="/formulario"
+                  state={{ juego }}
+                  className="btn btn-editar"
+                >
+                  ✏️ Editar
+                </Link>
+                <button
+                  className="btn btn-eliminar"
+                  onClick={() => onEliminar(juego.id)}
+                >
+                  🗑️ Eliminar
+                </button>
               </td>
             </tr>
           ))}

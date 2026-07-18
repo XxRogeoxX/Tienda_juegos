@@ -1,0 +1,77 @@
+.formulario-container {
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.formulario-container h2 {
+  margin-top: 0;
+  text-align: center;
+  color: #2c3e50;
+}
+
+.formulario-videojuego {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.formulario-videojuego label {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  font-size: 0.9rem;
+  color: #2c3e50;
+  gap: 5px;
+}
+
+.formulario-videojuego input,
+.formulario-videojuego select {
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.checkbox-label {
+  flex-direction: row !important;
+  align-items: center;
+  gap: 8px !important;
+}
+
+.formulario-botones {
+  display: flex;
+  gap: 10px;
+  margin-top: 1rem;
+}
+
+.btn-guardar {
+  background-color: #27ae60;
+  color: white;
+  flex: 1;
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-cancelar {
+  background-color: #95a5a6;
+  color: white;
+  flex: 1;
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-guardar:hover,
+.btn-cancelar:hover {
+  opacity: 0.9;
+}

@@ -107,3 +107,40 @@ progress::-webkit-progress-value {
     text-align: left;
   }
 }
+.celda-acciones {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  transition: opacity 0.2s;
+}
+
+.btn:hover {
+  opacity: 0.85;
+}
+
+.btn-editar {
+  background-color: #f39c12;
+  color: white;
+}
+
+.btn-eliminar {
+  background-color: #e74c3c;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .celda-acciones {
+    justify-content: flex-end;
+  }
+}
